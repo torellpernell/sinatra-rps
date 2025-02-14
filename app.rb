@@ -7,21 +7,21 @@ get("/") do
   erb(:home)
 end
 
-get("/app/rock") do
+get("/rock") do
   @computer_choice = rand(1..3)
 
   erb(:rock)
   
 end
 
-get("/app/paper") do
+get("/paper") do
   @computer_choice = rand(1..3)
 	
   erb(:paper)
 
 end
 
-get("/app/scissors") do
+get("/scissors") do
   @computer_choice = rand(1..3)
 
   erb(:scissors)
