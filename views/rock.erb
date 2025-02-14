@@ -1,22 +1,27 @@
-<!-- /views/two_six.erb -->
+<!-- /views/rock.erb -->
 
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Dice Roll</title>
+  <title>SINATRA-RPS</title>
 </head>
 
 <body>
 
-  <h1>2d6</h1>
+  <h1>We played rock!</h1>
   
-  <ul>
-  <% @rolls.each do |a_roll| %>
-    <li>
-      <%= a_roll %>
-    </li>
+  <% if @computer_choice == 1 %>
+    <h1>They played rock!</h1>
+    <h1>We tied!</h1>
+  <% elsif @computer_choice == 2 %>
+    <h1>They played paper!</h1>
+    <h1>We lost!</h1>
+  <% else %>
+    <h1>They played scissors!</h1>
+    <h1>We won!</h1>  
   <% end %>
-  </ul>
+    
+  <div><a href="/app/home">Rules</a></div>
   
 </body>
 </html>
