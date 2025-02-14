@@ -1,0 +1,27 @@
+<!-- /views/paper.erb -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SINATRA-RPS</title>
+</head>
+
+<body>
+
+  <h1>We played paper!</h1>
+  
+  <% if @computer_choice == 1 %>
+    <h1>They played rock!</h1>
+    <h1>We won!</h1>
+  <% elsif @computer_choice == 2 %>
+    <h1>They played paper!</h1>
+    <h1>We tied!</h1>
+  <% else %>
+    <h1>They played scissors!</h1>
+    <h1>We lost!</h1>  
+  <% end %>
+    
+  <div><a href="/">Rules</a></div>
+
+</body>
+</html>
